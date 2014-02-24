@@ -13,7 +13,7 @@ body,
 .pure-g [class *= "pure-u"],  
 .pure-g-r [class *= "pure-u"]{
 	font-family: 'Oxygen',Helvetica, sans-serif;
-	font-size:1.2em;
+	font-size:1em;
 	color: white;
 
 }
@@ -45,13 +45,18 @@ h1,h2,h3,h4,h5 {
 	vertical-align:middle;
 
 }
-.main-contain {
+.ideas-contain {
+	display:table;
   position:absolute;
   top:100%;
   width:100%;
-  min-height: 12%;
+  min-height:100%;
   z-index:2;
   background:white;
+}
+.ideas-centered {
+	display:table-cell;
+	vertical-align:middle;
 }
 .treehouse-title {
 	color: $treehouse-logo-bg;
