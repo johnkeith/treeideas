@@ -1,0 +1,76 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700);
+@import url(http://fonts.googleapis.com/css?family=Oxygen);
+@import url(http://fonts.googleapis.com/css?family=Cabin);
+
+$treehouse-logo-bg: #69cf80;
+$treehouse-darkest-grey: rgb(56, 64, 71);
+body {
+
+	background: url(../img/burninghouse.jpg) no-repeat fixed;
+background-size:cover;
+}
+body, 
+.pure-g [class *= "pure-u"],  
+.pure-g-r [class *= "pure-u"]{
+	font-family: 'Oxygen',Helvetica, sans-serif;
+	font-size:1.2em;
+	color: white;
+
+}
+h1,h2,h3,h4,h5 {
+	font-family: 'Roboto',Helvetica, sans-serif;
+}
+.full-title {
+	z-index:1;
+	overflow:hidden;
+	width:100%;
+	height:100%;
+	position:fixed;
+	top:0; left: 0;
+	background-color:rgba(56,64,71,.95);
+	background-image: linear-gradient(rgba(255,255,255,.05) 2px, transparent 2px),
+	linear-gradient(90deg, rgba(255,255,255,.05) 2px, transparent 2px),
+	linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+	linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+	background-size:100px 100px, 100px 100px, 20px 20px, 20px 20px;
+	background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
+	display:table;
+}
+.full-title-text {
+	font-size:4em;
+	font-family:'Cabin', Helvetica, sans-serif;
+	text-align:center;
+	text-transform:uppercase;
+	display:table-cell;
+	vertical-align:middle;
+
+}
+.main-contain {
+  position:absolute;
+  top:100%;
+  width:100%;
+  min-height: 12%;
+  z-index:2;
+  background:white;
+}
+.treehouse-title {
+	color: $treehouse-logo-bg;
+}
+.idea-left,
+.idea-right,
+.idea-middle {
+	margin:5%;
+	background:black;
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {  }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {  }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { }
