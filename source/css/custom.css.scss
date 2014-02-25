@@ -45,18 +45,25 @@ h1,h2,h3,h4,h5 {
 	vertical-align:middle;
 
 }
-.ideas-contain {
+@mixin container-positioning {
 	display:table;
   position:absolute;
-  top:100%;
   width:100%;
   min-height:100%;
-  z-index:2;
-  background:white;
 }
-.ideas-centered {
+@mixin v-h-centered {
 	display:table-cell;
 	vertical-align:middle;
+}
+
+.ideas-contain {
+	@include container-positioning;
+	top:100%;
+  z-index:2;
+  background:#f8f8f8;
+}
+.ideas-centered {
+	@include v-h-centered;
 }
 .treehouse-title {
 	color: $treehouse-logo-bg;
@@ -64,9 +71,52 @@ h1,h2,h3,h4,h5 {
 .idea-left,
 .idea-right,
 .idea-middle {
-	margin:5%;
-	background:black;
+	background:white;
+	border-radius:4px;
+	margin:2%;
+	color:black;
+	p,h1,.fa {
+		padding:3%;
+	}
+	p {
+		font-size:1.2em;
+		padding-bottom:40px;
+	}
+	h1 {
+		text-align:center;
+		width:100%;
+	}
+	.fa {
+		margin-top:20px;
+	}
 }
+.fa-anchor {
+	color:rgb(37, 112, 168);
+}
+.fa-code {
+	color:rgb(83, 187, 180);
+}
+.fa-bullseye {
+	color:rgb(225, 82, 88);
+}
+.ideas-icon {
+	width:100%;
+	text-align:center;
+	font-size:6em;
+}
+
+.implement-contain {
+	@include container-positioning;
+	top:100%;
+	z-index:3;
+	background: rgba(225, 82, 88,1);
+}
+.implement-text {
+	@include v-h-centered;
+	text-align: center;
+	font-size:2.5em;
+}
+
 
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
